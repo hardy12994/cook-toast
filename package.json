@@ -2,7 +2,7 @@
     "name": "cook-toast",
     "version": "0.0.0",
     "description": "An Indication for User that what to do NEXT on UI Like Angular",
-    "main": "app.js",
+    "main": "index.js",
     "scripts": {
         "transpile": "ngc",
         "package": "rollup -c",
@@ -16,7 +16,10 @@
     "keywords": [
         "toast",
         "toaster",
-        "cook-toast"
+        "cook-toast",
+        "web-toaster",
+        "web-toast",
+        "ui-toast"
     ],
     "author": "hardeep singh",
     "license": "ISC",
