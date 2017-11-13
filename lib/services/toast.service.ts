@@ -3,7 +3,7 @@ import { BehaviorSubject, } from "rxjs/Rx";
 
 
 @Injectable()
-export class Kitchen {
+export class KitchenService {
 
     message: BehaviorSubject<any>;
     type: BehaviorSubject<any>;

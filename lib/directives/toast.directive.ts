@@ -1,5 +1,5 @@
 import { Directive, Input, ViewContainerRef, TemplateRef } from "@angular/core";
-import { Kitchen } from "../services/toast.service";
+import { KitchenService } from "../services/toast.service";
 import { BehaviorSubject, } from "rxjs/Rx";
 import { retry } from "rxjs/operator/retry";
 
@@ -21,7 +21,7 @@ export class CooktoastDirective {
     constructor(
         public viewContainerRef: ViewContainerRef,
         public templateRef: TemplateRef<any>,
-        public toastService: Kitchen
+        public toastService: KitchenService
     ) {
         console.log('cooking your toast just a min.');
     }
