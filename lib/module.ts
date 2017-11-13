@@ -5,8 +5,9 @@ import { CooktoastDirective } from './directives/toast.directive';
 
 @NgModule({
     imports: [],
-    exports: [NgModule],
+    exports: [CooktoastDirective],
     declarations: [CooktoastDirective],
     providers: [KitchenService]
 })
+
 export class CookToastModule { }
