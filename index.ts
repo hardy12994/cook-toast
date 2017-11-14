@@ -1,3 +1,3 @@
-export * from "./lib/services/toast.service";
-export * from "./lib/directives/toast.directive";
-export * from "./lib/module"
+export { KitchenService } from "./lib/services/toast.service";
+export { CooktoastDirective } from "./lib/directives/toast.directive";
+export { CookToastModule } from "./lib/module"
