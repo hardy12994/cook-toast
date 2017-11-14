@@ -82,8 +82,11 @@ So here -
 - These are the possible postions 
   
   -`top:true;left:true` 
-  -`top:true;right:true` 
-  -`bottom:true;left:true` 
+
+  -`top:true;right:true`
+
+  -`bottom:true;left:true`
+   
   -`bottom:true;right:true` 
 
 
