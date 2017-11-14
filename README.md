@@ -1,9 +1,17 @@
 ##### Cook your Toast with Cook-Toast
 
+![WARN](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/warn_nnsjyl.png)
+
+![FAIL](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679476/fail_rksmcp.png)
+
+![INFO](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/Info_vryarw.png)
+
+![SUCCESS](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/success_upvnia.png)
+
 #### Installation -
 
 ```
-    npm install cook-toast --save
+npm install cook-toast --save
 ```
 
 ### Where its need ?
@@ -48,10 +56,10 @@ of TOAST you can use to make the user indications what to do NEXT.
  
      constructor(private kitchenService: KitchenService){
 
-             this.kitchenService.cook('Hey I am your Toast', 's');
-             this.kitchenService.cook('Hey I am your Toast', 'f');
-             this.kitchenService.cook('Hey I am your Toast', 'w');
-             this.kitchenService.cook('Hey I am your Toast', 'i');
+             this.kitchenService.cook('Hey I am your Toast', 's');  
+             this.kitchenService.cook('Hey I am your Toast', 'f');  
+             this.kitchenService.cook('Hey I am your Toast', 'w');  
+             this.kitchenService.cook('Hey I am your Toast', 'i');  
 
      }
 
@@ -62,10 +70,13 @@ of TOAST you can use to make the user indications what to do NEXT.
 
 Which for which ?
 
-- s is for **SUCCESS** -> GREENISH
-- f is for **FAILURE** -> RED
-- w is for **WARNING** -> YELLOW-ORANGE
-- i is for **INFORMATION** -> BLUE 
+- s is for **SUCCESS**. ![SUCCESS](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/success_upvnia.png)
+
+- f is for **FAILURE**. ![FAIL](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679476/fail_rksmcp.png)
+
+- w is for **WARNING**. ![WARN](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/warn_nnsjyl.png)
+
+- i is for **INFORMATION**. ![INFO](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/Info_vryarw.png)
 
 
 Now How it should be set in HTML ?
@@ -98,9 +109,3 @@ NOTE -
 ##### Contributions are most Welcome.
 
 ##### Hope you Like it !
-
-
-
-
-
-
