@@ -45,21 +45,16 @@ So yeah !!! you are the point to use your TOAST. Their are Four Type
 of TOAST you can use to make the user indications what to do NEXT.
 
 
-```
+```sh
  import { KitchenService } from 'cook-toast';
  
  class MyToastComponent {
- 
      constructor(private kitchenService: KitchenService){
-
              this.kitchenService.cook('Hey I am your Toast', 's');  
              this.kitchenService.cook('Hey I am your Toast', 'f');  
              this.kitchenService.cook('Hey I am your Toast', 'w');  
              this.kitchenService.cook('Hey I am your Toast', 'i');  
-
      }
-
-     
  }
 
 ```
@@ -77,7 +72,7 @@ Which for which ?
 
 Now How it should be set in HTML ?
 
-```
+```sh
     <span *cook-toast="5; left:true; top:true;" id="toast"></span>
 
 ```
@@ -97,11 +92,11 @@ So here -
   - `bottom:true;right:true` 
 
 
-NOTE - 
+**NOTE** - 
   If you Don't Set the Position of your TOAST it will comming to
   By default **LEFT-TOP**. 
 
 
-##### Contributions are most Welcome.
+##### Contributions are Most Welcome.
 
 ##### Hope you Like it !
