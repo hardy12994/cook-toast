@@ -1,8 +1,8 @@
-##### Cook your Toast with Cook-Toast
+### Cook your Toast with Cook-Toast
 
-![WARN](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/warn_nnsjyl.png) ![FAIL](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679476/fail_rksmcp.png)
+![WARN](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/warn_nnsjyl.png)    ![FAIL](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679476/fail_rksmcp.png)
 
-![INFO](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/Info_vryarw.png) ![SUCCESS](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/success_upvnia.png)
+![INFO](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/Info_vryarw.png)    ![SUCCESS](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/success_upvnia.png)
 
 #### Installation -
 
