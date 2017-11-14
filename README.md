@@ -78,16 +78,16 @@ Now How it should be set in HTML ?
 So here - 
 - `cook-toast` is the your Directive Name.
 - Ist Param `5` is Stay Time on Screen. It is in Seconds.
-- IInd and IIIrd Param are for Position of your toast.So just set `true` for two positions.
-- These are the possible postions 
+- IInd and IIIrd Param are for Position of your toast. So, just set `true` for two positions.
+- These are the possible postions ->
   
-  -`top:true;left:true` 
+  - `top:true;left:true` 
 
-  -`top:true;right:true`
+  - `top:true;right:true`
 
-  -`bottom:true;left:true`
+  - `bottom:true;left:true`
    
-  -`bottom:true;right:true` 
+  - `bottom:true;right:true` 
 
 
 NOTE - 
