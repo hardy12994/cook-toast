@@ -15,7 +15,7 @@
 
 ### How to use ?
 
- Import the `CookToastModule` in your main NgModule of your application
+ Import the *`CookToastModule`* in your main NgModule of your application
  
  and insert this module in your imports array of NgModule.
 
@@ -32,7 +32,7 @@
 
  ``` 
 
-Now Import the `KitchenService` in your Component to make use of it in HTML's
+Now Import the *`KitchenService`* in your Component to make use of it in HTML's
 
 Don't forget to Inject it in your component Constructor.  
 
@@ -62,10 +62,10 @@ of TOAST you can use to make the user indications what to do NEXT.
 
 Which for which ?
 
-- s is for *SUCCESS* -> GREENISH
-- f is for *FAILURE* -> RED
-- w is for *WARNING* -> YELLOW-ORANGE
-- i is for *INFORMATION* -> BLUE 
+- s is for **SUCCESS** -> GREENISH
+- f is for **FAILURE** -> RED
+- w is for **WARNING** -> YELLOW-ORANGE
+- i is for **INFORMATION** -> BLUE 
 
 
 Now How it should be set in HTML ?
@@ -92,12 +92,12 @@ So here -
 
 NOTE - 
   If you Don't Set the Position of your TOAST it will comming to
-  By default *LEFT-TOP*. 
+  By default **LEFT-TOP**. 
 
 
-###### Contributions are most Welcome.
+##### Contributions are most Welcome.
 
-###### Hope you Like it !
+##### Hope you Like it !
 
 
 
