@@ -1,4 +1,4 @@
-##### Cook your Toast with Cook-Toast
+#### Cook your Toast with Cook-Toast
 
 #### Installation -
 
@@ -62,10 +62,10 @@ of TOAST you can use to make the user indications what to do NEXT.
 
 Which for which ?
 
-- s is for SUCCESS -> GREENISH
-- f is for FAILURE -> RED
-- w is for WARNING -> YELLOW-ORANGE
-- i is for INFORMATION -> BLUE 
+- s is for *SUCCESS* -> GREENISH
+- f is for *FAILURE* -> RED
+- w is for *WARNING* -> YELLOW-ORANGE
+- i is for *INFORMATION* -> BLUE 
 
 
 Now How it should be set in HTML ?
