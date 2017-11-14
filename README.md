@@ -1,21 +1,22 @@
-###### Cook your Toast with Cook-Toast
+##### Cook your Toast with Cook-Toast
 
-### Installation -
+#### Installation -
 
 ```
     npm install cook-toast --save
 ```
 
-# Where its need ?
+### Where its need ?
 
 - To give the indication to the user what the next step is.
 - To give warning to user like Please Not try this Again. 
 - If I want to show the Success response on the UI.
 - If I want to show the Failure response on UI.
 
-# How to use ?
+### How to use ?
 
  Import the `CookToastModule` in your main NgModule of your application
+ 
  and insert this module in your imports array of NgModule.
 
 
@@ -32,9 +33,11 @@
  ``` 
 
 Now Import the `KitchenService` in your Component to make use of it in HTML's
+
 Don't forget to Inject it in your component Constructor.  
 
 So yeah !!! you are the point to use your TOAST. Their are Four Type 
+
 of TOAST you can use to make the user indications what to do NEXT.
 
 
@@ -83,9 +86,9 @@ NOTE -
   By default LEFT-TOP. 
 
 
-Contributions are most Welcome.
+###### Contributions are most Welcome.
 
-Hope you Like it !
+###### Hope you Like it !
 
 
 
