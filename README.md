@@ -1,4 +1,4 @@
-#### Cook your Toast with Cook-Toast
+##### Cook your Toast with Cook-Toast
 
 #### Installation -
 
@@ -78,12 +78,18 @@ Now How it should be set in HTML ?
 So here - 
 - `cook-toast` is the your Directive Name.
 - Ist Param `5` is Stay Time on Screen. It is in Seconds.
-- IInd and IIIrd Param are for Position of your toast
+- IInd and IIIrd Param are for Position of your toast.So just set `true` for two positions.
+- These are the possible postions 
+  
+  -`top:true;left:true` 
+  -`top:true;right:true` 
+  -`bottom:true;left:true` 
+  -`bottom:true;right:true` 
 
 
 NOTE - 
   If you Don't Set the Position of your TOAST it will comming to
-  By default LEFT-TOP. 
+  By default *LEFT-TOP*. 
 
 
 ###### Contributions are most Welcome.
