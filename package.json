@@ -1,6 +1,6 @@
 {
     "name": "cook-toast",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "An Indication for User that what to do NEXT on UI Like Angular. To give warning to user like Please Not try this Again. If I want to show the Success response on the UI. If I want to show the Failure response on UI.",
     "main": "index.js",
     "scripts": {
