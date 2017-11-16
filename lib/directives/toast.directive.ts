@@ -11,18 +11,13 @@ export class CooktoastDirective {
     type: string;
     color: string;
     this: this;
-    toastPosition: any = {
-        right: false,
-        left: false,
-        top: false,
-        bottom: false
-    };
 
     constructor(
         public viewContainerRef: ViewContainerRef,
         public templateRef: TemplateRef<any>,
         public toastService: KitchenService
     ) {
+        // this.toastService.positions = this.toastPosition;
         console.log('cooking your toast just a min.');
     }
 
@@ -33,21 +28,21 @@ export class CooktoastDirective {
 
     @Input('cook-toastRight') set setPostionRight(bool: boolean) {
         if (bool) {
-            this.toastPosition['right'] = true;
+            this.toastService.positions['right'] = true;
         }
     }
 
 
     @Input('cook-toastBottom') set setPositionBottom(bool: boolean) {
         if (bool) {
-            this.toastPosition['bottom'] = true;
+            this.toastService.positions['bottom'] = true;
         }
     }
 
 
     @Input('cook-toastTop') set setPositionTop(bool: boolean) {
         if (bool) {
-            this.toastPosition['top'] = true;
+            this.toastService.positions['top'] = true;
         }
     }
 
@@ -55,7 +50,7 @@ export class CooktoastDirective {
 
     @Input('cook-toastLeft') set setPositionLeft(bool: boolean) {
         if (bool) {
-            this.toastPosition['left'] = true;
+            this.toastService.positions['left'] = true;
         }
     }
 
@@ -108,24 +103,24 @@ export class CooktoastDirective {
         document.getElementById("toast").style['position'] = 'fixed';
         document.getElementById("toast").style['zIndex'] = '1';
 
-        if (this.toastPosition["bottom"]) {
+        if (this.toastService.positions["bottom"]) {
             document.getElementById("toast").style['bottom'] = '0px';
             document.getElementById("toast").style.marginBottom = '30px';
         }
 
 
-        if (this.toastPosition["top"]) {
+        if (this.toastService.positions["top"]) {
             document.getElementById("toast").style['top'] = '0px';
             document.getElementById("toast").style.marginTop = '30px';
         }
 
 
-        if (this.toastPosition["right"]) {
+        if (this.toastService.positions["right"]) {
             document.getElementById("toast").style['right'] = '0px';
             document.getElementById("toast").style.marginRight = '15px';
         }
 
-        if (this.toastPosition["left"]) {
+        if (this.toastService.positions["left"]) {
             document.getElementById("toast").style['left'] = '0px';
             document.getElementById("toast").style.marginLeft = '15px';
         }
@@ -147,16 +142,16 @@ export class CooktoastDirective {
         let interval = setInterval(function () {
 
             let trueCount = 0;
-            for (const index in that.toastPosition) {
-                if (that.toastPosition[index]) {
+            for (const index in that.toastService.positions) {
+                if (that.toastService.positions[index]) {
                     trueCount++;
                 }
             }
 
             if (trueCount === 2) {
                 that.subscribeToastBehaviour(seconds);
-                for (const index in that.toastPosition) {
-                    that.toastPosition[index] = false;
+                for (const index in that.toastService.positions) {
+                    that.toastService.positions[index] = false;
                 }
                 clear();
             }

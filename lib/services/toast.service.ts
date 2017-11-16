@@ -7,6 +7,12 @@ export class KitchenService {
 
     message: BehaviorSubject<any>;
     type: BehaviorSubject<any>;
+    positions: any = {
+        left: false,
+        right: false,
+        top: false,
+        bottom: false
+    };
 
     constructor() {
         this.message = new BehaviorSubject("");
