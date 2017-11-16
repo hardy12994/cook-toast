@@ -92,9 +92,23 @@ So here -
   - `bottom:true;right:true` 
 
 
+If you want to provide RUN-TIME Positions for your Cook-Toast
+
+then just insert the object of postions like this -
+
+```sh
+    
+    this.kitchenService.cook('Hey I am your Toast', 'i', {
+        right: true,
+        bottom: true
+    });
+
+```
+
+
 **NOTE** - 
   If you Don't Set the Position of your TOAST it will comming to
-  By default **LEFT-TOP**. 
+  By default **LEFT-TOP**.
 
 
 ##### Contributions are Most Welcome.
