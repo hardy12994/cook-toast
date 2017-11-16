@@ -17,7 +17,6 @@ export class CooktoastDirective {
         public templateRef: TemplateRef<any>,
         public toastService: KitchenService
     ) {
-        // this.toastService.positions = this.toastPosition;
         console.log('cooking your toast just a min.');
     }
 
@@ -142,6 +141,7 @@ export class CooktoastDirective {
         let interval = setInterval(function () {
 
             let trueCount = 0;
+            
             for (const index in that.toastService.positions) {
                 if (that.toastService.positions[index]) {
                     trueCount++;
@@ -150,11 +150,10 @@ export class CooktoastDirective {
 
             if (trueCount === 2) {
                 that.subscribeToastBehaviour(seconds);
-                for (const index in that.toastService.positions) {
-                    that.toastService.positions[index] = false;
-                }
                 clear();
             }
+
+
         }, 0);
         let clear = function () {
             clearInterval(interval);

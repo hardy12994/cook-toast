@@ -19,7 +19,16 @@ export class KitchenService {
         this.type = new BehaviorSubject("");
     }
 
-    cook(message: string, type: string) {
+    cook(message: string, type: string, position: any = null) {
+        if (position) {
+            for (const index in this.positions) {
+                if (position[index]) {
+                    this.positions[index] = position[index];
+                } else {
+                    this.positions[index] = false;
+                }
+            }
+        }
         this.message.next(message);
         this.type.next(type);
     }
