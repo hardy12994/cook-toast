@@ -92,7 +92,9 @@ So here -
   - `bottom:true;right:true` 
 
 
-If you want to provide RUN-TIME Positions for your Cook-Toast
+### RUN-TIME Positions -
+
+If you want to provide **RUN-TIME Positions** for your Cook-Toast
 
 then just insert the object of postions like this -
 
