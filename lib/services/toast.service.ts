@@ -13,13 +13,15 @@ export class KitchenService {
         top: false,
         bottom: false
     };
-
+    slide: boolean = false;
+    
     constructor() {
         this.message = new BehaviorSubject("");
         this.type = new BehaviorSubject("");
     }
 
-    cook(message: string, type: string, position: any = null) {
+    cook(message: string, type: string, position: any = null, slide: boolean = false) {
+        
         if (position) {
             for (const index in this.positions) {
                 if (position[index]) {
@@ -29,6 +31,11 @@ export class KitchenService {
                 }
             }
         }
+
+        if (slide) {
+            this.slide = true;
+        }
+
         this.message.next(message);
         this.type.next(type);
     }

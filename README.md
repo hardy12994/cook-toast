@@ -113,6 +113,33 @@ then just insert the object of postions like this -
   By default **LEFT-TOP**.
 
 
+
+### Want to make Slide Animation in Toast? -
+
+If you want to slide your Toast to the to the Vertical Sides,
+
+just make the fourth Parameter `true` while you cook your toast in RUNTIME and
+
+if you can also use in your HTML Parameters.
+
+- For Runtime slide Animation -
+
+```sh
+    
+    this.kitchenService.cook('Hey I am your Toast', 'i', {
+        right: true,
+        bottom: true
+    }, true);
+
+```
+
+- For HTML Slide Animation
+
+```sh
+    <span *cook-toast="5; left:true; top:true; slide:true;" id="toast"></span>
+
+```
+
 ##### Contributions are Most Welcome.
 
 ##### Hope you Like it !

@@ -2,7 +2,7 @@ import { Directive, Input, ViewContainerRef, TemplateRef } from "@angular/core";
 import { KitchenService } from "../services/toast.service";
 import { BehaviorSubject, } from "rxjs/Rx";
 import { retry } from "rxjs/operator/retry";
-
+// import { $ } from "../modules/jquerry";
 @Directive({
     selector: '[cook-toast]'
 })
@@ -53,6 +53,12 @@ export class CooktoastDirective {
         }
     }
 
+    @Input('cook-toastSlide') set slideToast(bool: boolean) {
+        if (bool) {
+            this.toastService.slide = true;
+        }
+    }
+
 
     subscribeToastBehaviour(sec: number) {
 
@@ -91,37 +97,67 @@ export class CooktoastDirective {
 
 
     setDecoration(newMessage: string) {
+        var toast = document.getElementById("toast");
         this.viewContainerRef.createEmbeddedView(this.templateRef);
+        // var script = document.createElement('script');
+        // script.src = '../modules/jquerry.js';
 
-        document.getElementById("toast").innerHTML = newMessage;
-        document.getElementById("toast").style["backgroundColor"] = this.color;
-        document.getElementById("toast").style['color'] = "#e6e6e6";
-        document.getElementById("toast").style['borderRadius'] = '5px';
-        document.getElementById("toast").style['fontFamily'] = 'verdana';
-        document.getElementById("toast").style['padding'] = '10px 10px';
-        document.getElementById("toast").style['position'] = 'fixed';
-        document.getElementById("toast").style['zIndex'] = '1';
+        // $.
+
+        toast.innerHTML = newMessage;
+        toast.style["backgroundColor"] = this.color;
+        toast.style['color'] = "#e6e6e6";
+        toast.style['borderRadius'] = '5px';
+        toast.style['fontFamily'] = 'verdana';
+        toast.style['padding'] = '10px 10px';
+        toast.style['position'] = 'fixed';
+        toast.style['zIndex'] = '1';
 
         if (this.toastService.positions["bottom"]) {
-            document.getElementById("toast").style['bottom'] = '0px';
-            document.getElementById("toast").style.marginBottom = '30px';
+            toast.style['bottom'] = '0px';
+            toast.style.marginBottom = '30px';
         }
 
 
         if (this.toastService.positions["top"]) {
-            document.getElementById("toast").style['top'] = '0px';
-            document.getElementById("toast").style.marginTop = '30px';
+            toast.style['top'] = '0px';
+            toast.style.marginTop = '30px';
         }
 
 
         if (this.toastService.positions["right"]) {
-            document.getElementById("toast").style['right'] = '0px';
-            document.getElementById("toast").style.marginRight = '15px';
+            toast.style['right'] = '0px';
+            toast.style.marginRight = '15px';
         }
 
         if (this.toastService.positions["left"]) {
-            document.getElementById("toast").style['left'] = '0px';
-            document.getElementById("toast").style.marginLeft = '15px';
+            toast.style['left'] = '0px';
+            toast.style.marginLeft = '15px';
+        }
+    }
+
+
+    motionToVertical(containerRef: any) {
+
+        var that = this;
+        var startFrom = 15;
+        var pathToMove = 15 + document.getElementById("toast").offsetWidth;
+        var direction = document.getElementById("toast").style.marginRight;
+
+        var id = setInterval(frame, 0);
+        function frame() {
+            if (pathToMove === 0) {
+                clearInterval(id);
+                containerRef.clear();
+            } else {
+                pathToMove--;
+                startFrom--;
+                if (that.toastService.positions["right"]) {
+                    direction = document.getElementById("toast").style.marginRight = startFrom + 'px';
+                } else {
+                    direction = document.getElementById("toast").style.marginLeft = startFrom + 'px';
+                }
+            }
         }
     }
 
@@ -129,19 +165,25 @@ export class CooktoastDirective {
         var containerRef = this.viewContainerRef;
         var that = this;
         setTimeout(function () {
-            containerRef.clear();
+            if (that.toastService.slide) {
+                that.motionToVertical(containerRef);
+            } else {
+                containerRef.clear();
+            }
         }, seconds * 1000);
     }
 
     cookIt(seconds: number) {
+
         if (!seconds) {
             return;
         }
+
         let that = this;
         let interval = setInterval(function () {
 
             let trueCount = 0;
-            
+
             for (const index in that.toastService.positions) {
                 if (that.toastService.positions[index]) {
                     trueCount++;
@@ -152,7 +194,6 @@ export class CooktoastDirective {
                 that.subscribeToastBehaviour(seconds);
                 clear();
             }
-
 
         }, 0);
         let clear = function () {
