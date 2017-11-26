@@ -97,8 +97,9 @@ export class CooktoastDirective {
 
 
     setDecoration(newMessage: string) {
-        var toast = document.getElementById("toast");
         this.viewContainerRef.createEmbeddedView(this.templateRef);
+        var toast = document.getElementById("toast");
+        
         // var script = document.createElement('script');
         // script.src = '../modules/jquerry.js';
 
