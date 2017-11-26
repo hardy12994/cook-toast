@@ -137,25 +137,41 @@ export class CooktoastDirective {
     }
 
 
+    getDistanceinPX(distaceFromVerticalEdge: any) {
+        return {
+            distance: distaceFromVerticalEdge.replace(/[^0-9]+/ig, ""),
+            distanceType: distaceFromVerticalEdge.replace(/[0-9]+/ig, "")
+        }
+    }
+
+
     motionToVertical(containerRef: any) {
 
         var that = this;
-        var startFrom = 15;
-        var pathToMove = 15 + document.getElementById("toast").offsetWidth;
-        var direction = document.getElementById("toast").style.marginRight;
+        var direction;
+        var distaceFromVerticalEdge = document.getElementById("toast").style.marginRight ||
+            document.getElementById("toast").style.marginLeft;
+
+
+        var startFrom = this.getDistanceinPX(distaceFromVerticalEdge);
+        var pathToMove = startFrom.distance + document.getElementById("toast").offsetWidth;
 
         var id = setInterval(frame, 0);
         function frame() {
             if (pathToMove === 0) {
+
                 clearInterval(id);
                 containerRef.clear();
+
             } else {
+
                 pathToMove--;
-                startFrom--;
+                startFrom.distance--;
+
                 if (that.toastService.positions["right"]) {
-                    direction = document.getElementById("toast").style.marginRight = startFrom + 'px';
+                    document.getElementById("toast").style.marginRight = startFrom.distance + startFrom.distanceType;
                 } else {
-                    direction = document.getElementById("toast").style.marginLeft = startFrom + 'px';
+                    document.getElementById("toast").style.marginLeft = startFrom.distance + startFrom.distanceType;
                 }
             }
         }
