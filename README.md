@@ -118,9 +118,9 @@ then just insert the object of postions like this -
 
 If you want to slide your Toast to the to the Vertical Sides,
 
-just make the fourth Parameter `true` while you cook your toast in RUNTIME and
+just make the fourth Parameter `true` while you cook your toast 
 
-if you can also use in your HTML Parameters.
+in RUNTIME and you can also use in your HTML Parameters.
 
 - For Runtime slide Animation -
 
@@ -139,6 +139,10 @@ if you can also use in your HTML Parameters.
     <span *cook-toast="5; left:true; top:true; slide:true;" id="toast"></span>
 
 ```
+
+
+
+
 
 ##### Contributions are Most Welcome.
 
