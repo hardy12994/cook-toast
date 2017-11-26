@@ -122,7 +122,7 @@ just make the fourth Parameter `true` while you cook your toast
 
 in RUNTIME and you can also use in your HTML Parameters.
 
-- For Runtime slide Animation -
+- For Runtime **Slide Animation** -
 
 ```sh
     
@@ -133,7 +133,7 @@ in RUNTIME and you can also use in your HTML Parameters.
 
 ```
 
-- For HTML Slide Animation
+- For HTML **Slide Animation**
 
 ```sh
     <span *cook-toast="5; left:true; top:true; slide:true;" id="toast"></span>
