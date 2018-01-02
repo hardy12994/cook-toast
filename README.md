@@ -1,5 +1,7 @@
 ### Cook your Toast with Cook-Toast
 
+#### Note - **For Angular 5 please reffer to this [**Cook-Toast-NG5**](https://www.npmjs.com/package/cook-toast-ng5)**
+
 ![WARN](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/warn_nnsjyl.png)    ![FAIL](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679476/fail_rksmcp.png)
 
 ![INFO](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/Info_vryarw.png)    ![SUCCESS](http://res.cloudinary.com/dkws91cqo/image/upload/v1510679477/success_upvnia.png)
