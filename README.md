@@ -73,7 +73,9 @@ Which for which ?
 Now How it should be set in HTML ?
 
 ```sh
-    <span *cook-toast="5; left:true; top:true;" id="toast"></span>
+    <div id="toast">
+        <span *cook-toast="5; left:true; top:true;"></span>
+    </div>
 
 ```
 
