@@ -160,15 +160,14 @@ export class CooktoastDirective {
         function frame() {
             if (pathToMove === 0) {
                 clearInterval(id);
-                containerRef.clear();
+                return containerRef.clear();
             } else {
-                
+                pathToMove--;
+                startFrom.distance--;
+
                 if (!document.getElementById("toast")) {
                     return;
                 }
-
-                pathToMove--;
-                startFrom.distance--;
                 if (that.toastService.positions["right"]) {
                     document.getElementById("toast").style.marginRight = startFrom.distance + startFrom.distanceType;
                 } else {
