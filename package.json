@@ -1,6 +1,6 @@
 {
     "name": "cook-toast",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "An Indication for User that what to do NEXT with SLIDE Animation on UI Like Angular.To give warning to user like Please Not try this Again.If I want to show the Success response on the UI.If I want to show the Failure response on UI.",
     "main": "index.js",
     "scripts": {
