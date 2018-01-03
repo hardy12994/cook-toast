@@ -75,10 +75,7 @@ Which for which ?
 Now How it should be set in HTML ?
 
 ```sh
-    <div id="toast">
-        <span *cook-toast="5; left:true; top:true;"></span>
-    </div>
-
+    <span id="toast" *cook-toast="5; left:true; top:true;"></span>
 ```
 
 So here - 
@@ -140,8 +137,7 @@ in RUNTIME and you can also use in your HTML Parameters.
 - For HTML **Slide Animation**
 
 ```sh
-    <span *cook-toast="5; left:true; top:true; slide:true;" id="toast"></span>
-
+    <span id="toast" *cook-toast="5; left:true; top:true; slide:true;"></span>
 ```
 
 

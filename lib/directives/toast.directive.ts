@@ -99,7 +99,7 @@ export class CooktoastDirective {
     setDecoration(newMessage: string) {
         this.viewContainerRef.createEmbeddedView(this.templateRef);
         var toast = document.getElementById("toast");
-        
+
         // var script = document.createElement('script');
         // script.src = '../modules/jquerry.js';
 
@@ -140,7 +140,7 @@ export class CooktoastDirective {
 
     getDistanceinPX(distaceFromVerticalEdge: any) {
         return {
-            distance: distaceFromVerticalEdge.replace(/[^0-9]+/ig, ""),
+            distance: Number(distaceFromVerticalEdge.replace(/[^0-9]+/ig, "")),
             distanceType: distaceFromVerticalEdge.replace(/[0-9]+/ig, "")
         }
     }
