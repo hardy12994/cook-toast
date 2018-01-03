@@ -157,18 +157,13 @@ export class CooktoastDirective {
         var startFrom = this.getDistanceinPX(distaceFromVerticalEdge);
         var pathToMove = startFrom.distance + document.getElementById("toast").offsetWidth;
 
-        var id = setInterval(frame, 0);
-        function frame() {
+        for (; ;) {
             if (pathToMove === 0) {
-
-                clearInterval(id);
                 containerRef.clear();
-
+                break;
             } else {
-
                 pathToMove--;
                 startFrom.distance--;
-
                 if (that.toastService.positions["right"]) {
                     document.getElementById("toast").style.marginRight = startFrom.distance + startFrom.distanceType;
                 } else {
@@ -176,6 +171,7 @@ export class CooktoastDirective {
                 }
             }
         }
+
     }
 
     makeInvisible(seconds: number) {
