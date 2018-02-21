@@ -148,6 +148,10 @@ export class CooktoastDirective {
 
     motionToVertical(containerRef: any) {
 
+        if (!document.getElementById("toast")) {
+            return;
+        }
+
         var that = this;
         var direction;
         var distaceFromVerticalEdge = document.getElementById("toast").style.marginRight ||
